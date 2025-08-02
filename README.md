@@ -42,15 +42,33 @@ Este manual describe los pasos necesarios para ejecutar la aplicación Billy Tes
 ### Salida esperada
 La ejecución debería verse algo así:
 ```
-Starting Billy Test Application...
-Input file: lote.ejemplo.json
-Output folder: output
-Starting XML generation...
-Starting HTML generation...
-XML generation completed!
-HTML generation completed!
-Both XML and HTML generation completed successfully!
-Application completed successfully!
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------< com.billy:billy-test >------------------------
+[INFO] Building Billy Test - Document Processor 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- clean:3.2.0:clean (default-clean) @ billy-test ---
+[INFO] Deleting C:\Users\felip\test\billy-test\target
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ billy-test ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.11.0:compile (default-compile) @ billy-test ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 10 source files with javac [debug target 17] to target\classes
+[INFO]
+[INFO] --- exec:3.1.0:java (default-cli) @ billy-test ---
+============================================================
+? COMENZANDO PROCESO ...
+? Hora inicio: 23:56:06
+============================================================
+? Created output folder
+? Hora fin : 23:56:06
+?? Tiempo total : 0.204 seconds (204ms)
+
+? PROCESO TERMINADO , revisar el directorio output!
 ```
 
 ---
