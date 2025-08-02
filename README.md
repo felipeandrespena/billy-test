@@ -73,68 +73,6 @@ La ejecución debería verse algo así:
 
 ---
 
-## macOS
-
-### Prerequisitos
-- Conexión a internet (para descargar dependencias de Maven)
-- Git instalado (viene preinstalado en macOS)
-
-### Pasos de instalación y ejecución
-
-1. **Descargar JDK 17.0.12**
-   - Ir a [Oracle JDK Downloads](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) o [OpenJDK](https://jdk.java.net/17/)
-   - Descargar la versión JDK 17.0.12 para macOS (ARM64 para Apple Silicon o x64 para Intel)
-
-2. **Descomprimir JDK**
-   - Crear el directorio `/Users/$USER/java` si no existe:
-     ```bash
-     mkdir -p ~/java
-     ```
-   - Descomprimir el archivo descargado:
-     ```bash
-     cd ~/java
-     tar -xzf ~/Downloads/openjdk-17.0.12_macos-*.tar.gz
-     ```
-   - El resultado debería ser: `/Users/$USER/java/jdk-17.0.12.jdk`
-
-3. **Configurar variable de entorno JAVA_HOME**
-   ```bash
-   export JAVA_HOME=~/java/jdk-17.0.12.jdk/Contents/Home
-   export PATH=$JAVA_HOME/bin:$PATH
-   ```
-
-   **Para hacerlo permanente, agregarlo al archivo `~/.zshrc` o `~/.bash_profile`:**
-   ```bash
-   echo 'export JAVA_HOME=~/java/jdk-17.0.12.jdk/Contents/Home' >> ~/.zshrc
-   echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.zshrc
-   source ~/.zshrc
-   ```
-
-4. **Verificar instalación de Java**
-   ```bash
-   java -version
-   ```
-   Debería mostrar algo como: `java version "17.0.12"`
-
-5. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/felipeandrespena/billy-test.git
-   ```
-
-6. **Navegar al directorio del proyecto**
-   ```bash
-   cd billy-test
-   ```
-
-7. **Hacer ejecutable el wrapper de Maven (solo la primera vez)**
-   ```bash
-   chmod +x mvnw
-   ```
-
-8. **Compilar y ejecutar la aplicación**
-   ```bash
-   ./mvnw clean compile exec:java
-   ```
 
 ### Salida esperada
 La ejecución en windows debería verse algo así:
@@ -177,11 +115,6 @@ La ejecución en windows debería verse algo así:
 mvnw.cmd exec:java -Dexec.args="mi-archivo.json mi-carpeta-salida"
 ```
 
-### macOS
-```bash
-./mvnw exec:java -Dexec.args="mi-archivo.json mi-carpeta-salida"
-```
-
 ## Archivos de salida
 
 La aplicación genera los siguientes archivos en la carpeta de salida (por defecto `output/`):
@@ -196,9 +129,6 @@ La aplicación genera los siguientes archivos en la carpeta de salida (por defec
 
 ### Error: `ClassNotFoundException`
 - Ejecutar primero: `mvnw.cmd clean compile` (Windows) o `./mvnw clean compile` (macOS)
-
-### Error: `Permission denied` (solo macOS)
-- Ejecutar: `chmod +x mvnw`
 
 ### La primera ejecución es lenta
 - Es normal, Maven descarga las dependencias necesarias la primera vez
