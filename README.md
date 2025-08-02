@@ -71,42 +71,6 @@ La ejecución debería verse algo así:
 ? PROCESO TERMINADO , revisar el directorio output!
 ```
 
----
-
-
-### Salida esperada
-La ejecución en windows debería verse algo así:
-```
-[INFO] Scanning for projects...
-[INFO]
-[INFO] ------------------------< com.billy:billy-test >------------------------
-[INFO] Building Billy Test - Document Processor 1.0.0
-[INFO]   from pom.xml
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO]
-[INFO] --- clean:3.2.0:clean (default-clean) @ billy-test ---
-[INFO] Deleting C:\Users\felip\test\billy-test\target
-[INFO]
-[INFO] --- resources:3.3.1:resources (default-resources) @ billy-test ---
-[INFO] Copying 2 resources from src\main\resources to target\classes
-[INFO]
-[INFO] --- compiler:3.11.0:compile (default-compile) @ billy-test ---
-[INFO] Changes detected - recompiling the module! :source
-[INFO] Compiling 10 source files with javac [debug target 17] to target\classes
-[INFO]
-[INFO] --- exec:3.1.0:java (default-cli) @ billy-test ---
-============================================================
-? COMENZANDO PROCESO ...
-? Hora inicio: 23:56:06
-============================================================
-? Created output folder
-? Hora fin : 23:56:06
-?? Tiempo total : 0.204 seconds (204ms)
-
-? PROCESO TERMINADO , revisar el directorio output!
-```
-
----
 
 ## Ejecución con parámetros personalizados
 
