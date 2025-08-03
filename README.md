@@ -19,22 +19,24 @@ Este manual describe los pasos necesarios para ejecutar la aplicación Billy Tes
    - Descomprimir el archivo descargado en `C:\home`
    - El resultado debería ser: `C:\home\jdk-17.0.12`
 
-3. **Configurar variable de entorno JAVA_HOME**
+3. **Abrir una consola de comandos windows. Presional Inicio y luego cmd**
+
+4. **Configurar variable de entorno JAVA_HOME**
    ```cmd
    set JAVA_HOME=C:\home\jdk-17.0.12
    ```
 
-4. **Clonar el repositorio**
+5. **Clonar el repositorio**
    ```cmd
    git clone https://github.com/felipeandrespena/billy-test.git
    ```
 
-5. **Navegar al directorio del proyecto**
+6. **Navegar al directorio del proyecto**
    ```cmd
    cd billy-test
    ```
 
-6. **Compilar y ejecutar la aplicación**
+7. **Compilar y ejecutar la aplicación**
    ```cmd
    mvnw.cmd clean compile exec:java
    ```
